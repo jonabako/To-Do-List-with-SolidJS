@@ -93,5 +93,9 @@ render(App, document.getElementById("app"));
 
 /*
 Notes for improvement:
-
+> Managing exceptions (i.e. not allowing an empty task to be added to the list)
+> Creating separate tabs for completed/pending tasks corresponding to the tasks that have already been checked by the user
+> Dynamically shifting tasks up and down according to user preference/priority (atm the tasks are listed according to input order)
+> Managing multiple lists, which can be named and grouped to topic relavance
+> 
 */

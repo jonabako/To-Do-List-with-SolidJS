@@ -5,7 +5,7 @@ import { For } from "solid-js";
 import { render } from "solid-js/web";
 import html from "solid-js/html";
 
-// create a store to allow a tree of signals to be independently tracked and modified.
+// create a store to allow signals to be independently tracked and modified.
 function createLocalStore(initState) {
   const [state, setState] = createStore(initState);
   if (localStorage.todos) setState(JSON.parse(localStorage.todos));
@@ -21,7 +21,11 @@ const App = () => {
     newTitle: "",
     idCounter: 0,
   });
-
+  
+  // formatting through html
+  // creating new states on click - keeping track of existing task number 
+  // adding checkbox feature for finished tasks - removing or adding tasks by clicking +/x
+  // added tasks are editable
   return html`
     <center><div style="background-image: url(https://raw.githubusercontent.com/jonabako/To-Do-List-with-SolidJS/main/background.jpg)">
       <br><h3 style="font-family:Comic Sans MS; font-size:30px; background-color:white; opacity: 0.5; transparent;">My To-Do List &#128394</h3>
@@ -86,3 +90,8 @@ const App = () => {
 
 // the browser app entry point
 render(App, document.getElementById("app"));
+
+/*
+Notes for improvement:
+
+*/

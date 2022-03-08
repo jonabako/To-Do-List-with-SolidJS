@@ -19,7 +19,6 @@ const App = () => {
     idCounter: 0,
   });
 
-
   return html`
     <center><div style="background-image: url(https://raw.githubusercontent.com/jonabako/To-Do-List-with-SolidJS/main/background.jpg)">
       <br><h3 style="font-family:Comic Sans MS; font-size:30px; background-color:white; opacity: 0.5; transparent;">My To-Do List &#128394</h3>

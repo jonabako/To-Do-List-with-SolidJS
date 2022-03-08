@@ -1,7 +1,7 @@
 // import all neccessary libraries
+import { createStore } from "solid-js/store";
 import { createEffect } from "solid-js";
 import { For } from "solid-js";
-import { createStore } from "solid-js/store";
 import { render } from "solid-js/web";
 import html from "solid-js/html";
 

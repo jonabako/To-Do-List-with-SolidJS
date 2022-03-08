@@ -5,9 +5,12 @@ import { createStore } from "solid-js/store";
 import { render } from "solid-js/web";
 import html from "solid-js/html";
 
+// create a store to allow a tree of signals to be independently tracked and modified.
 function createLocalStore(initState) {
   const [state, setState] = createStore(initState);
   if (localStorage.todos) setState(JSON.parse(localStorage.todos));
+  // create a new computation that runs the given function in a tracking scope, 
+  // tracking its dependencies, and rerunning the function whenever the dependencies update
   createEffect(() => (localStorage.todos = JSON.stringify(state)));
   return [state, setState];
 }
@@ -81,4 +84,5 @@ const App = () => {
   `;
 };
 
+// the browser app entry point
 render(App, document.getElementById("app"));
